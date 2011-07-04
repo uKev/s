@@ -13,7 +13,7 @@
         <body> 
             <h1>Hello, Welcome to the great, small and fast URL-Shortener <i>s</i></h1> 
             <p><strong>Warning:</strong> <i>s</i> is highly experimental. Use it only for non important stuff. It might eat your pets and children.</p> 
-            <p>Your created short url is: <strong>{{url+"s/"+key}}</strong>
+            <p>Your created short url is: <strong>{{url+key}}</strong>
             <p>Back to <a href="/">Index</a></p>
             </p>
         </body> 

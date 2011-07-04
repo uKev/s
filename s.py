@@ -31,7 +31,8 @@ def add_url():
         return dict(key=key, url=request.url)
     else:
         abort(400, "You did not enter a valid URL")
-    
+
+@route("/:key")
 @route("/s/:key")
 def redirect_to_url(key):
     try:
@@ -49,4 +50,5 @@ if __name__ == '__main__':
     run(host="localhost", port=8080, reloader=True)
 else:
     import bottle
+    bottle.TEMPLATE_PATH.insert(0,config.view_path)
     applications = {'':bottle.app()}

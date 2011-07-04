@@ -1,4 +1,5 @@
 lib**
 **.pyc
 s.db
+config.py
 

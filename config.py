@@ -4,5 +4,9 @@ Created on 04.07.2011
 
 @author: Kevin Zuber
 '''
+import os
 
-db_path = "s.db"
+s_path = ""
+
+db_path = os.path.join(s_path, "s.db")
+view_path = os.path.join(s_path, "views/")
