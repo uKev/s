@@ -9,7 +9,9 @@ s is an url shortener which is designed to be fast and small.
 import sys
 sys.path.append("lib")
 
-from bottle import route, run, static_file, view, abort, redirect, request
+from lib.bottle import route, run, static_file, view, abort, redirect, request #@UnresolvedImport
+from lib import bottle
+
 
 from service.shortener import Shortener
 import config
@@ -45,10 +47,8 @@ def server_static(path):
     return static_file(path, root='./static')
 
 if __name__ == '__main__':
-    import bottle
     bottle.debug(True)
     run(host="localhost", port=8080, reloader=True)
 else:
-    import bottle
     bottle.TEMPLATE_PATH.insert(0,config.view_path)
-    applications = {'':bottle.app()}
+    application = bottle.default_app()
