@@ -12,9 +12,10 @@ sys.path.append("lib")
 from bottle import route, run, static_file, view, abort, redirect, request
 
 from service.shortener import Shortener
+import config
 
 
-shortener = Shortener("s.db")
+shortener = Shortener(config.db_path)
 
 @route("/")
 @view("index")
