@@ -1,8 +1,0 @@
-<uwsgi>
-  <pythonpath>./</pythonpath>
-  <app mountpoint="/">
-  	<script>s</script>
-  </app>
-  <master/>
-  <processes>4</processes>
-</uwsgi>
