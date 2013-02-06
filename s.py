@@ -5,6 +5,9 @@ Created on 17.05.2011
 s is an url shortener which is designed to be fast and small.
 
 @author: Kevin Zuber
+
+Copyright (c) 2011, Kevin Zuber.
+License: MIT (see LICENSE for details)
 '''
 import sys, os
 

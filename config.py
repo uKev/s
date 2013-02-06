@@ -3,6 +3,9 @@
 Created on 04.07.2011
 
 @author: Kevin Zuber
+
+Copyright (c) 2011, Kevin Zuber.
+License: MIT (see LICENSE for details)
 '''
 import os
 

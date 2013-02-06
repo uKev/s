@@ -3,6 +3,9 @@
 Created on 17.05.2011
 
 @author: Kevin Zuber
+
+Copyright (c) 2011, Kevin Zuber.
+License: MIT (see LICENSE for details)
 '''
 import sqlite3
 import time
@@ -45,12 +48,12 @@ class Shortener(object):
         self.db_file = db_file
         self.__connection = sqlite3.connect(db_file)
         self.url = GetURL(self.__connection)
-        
+
         c = self.__connection.cursor()
         c.execute("create table if not exists shorts (id INTEGER PRIMARY KEY, url TEXT, ip TEXT, time INTEGER)")
         self.__connection.commit()
-    
-    
+
+
     def get_id(self, url):
         c = self.__connection.cursor()
         row = c.execute("select id from shorts where url=?", (url,)).fetchone()
@@ -58,13 +61,13 @@ class Shortener(object):
             return row[0]
         else:
             return None
-        
+
     def exists(self, url):
         if self.get_id(url):
             return True
         else:
             return False
-    
+
     def add(self, url, ip):
         id = self.get_id(url)
         if not id:
